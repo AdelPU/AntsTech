@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntsTech</title>
+
+    <!-- File CSS-->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/main_page.css">
+    <link rel="stylesheet" href="css/login_signup.css">
+    <link rel="stylesheet" href="css/ItemsDetails.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Font Awsome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <!--Navbar-->
+        <div class="container top-nav">
+
+            <a href="index.html" class="logo"><img src="img/ANTS-LOGO.png" alt=""></a>
+
+            <form action="" class="search">
+
+                <!-- Dropdown start --> <!-- This should be dynamic  -->
+                <div class="dropdown">
+                    <div id="drop-text" class="dropdown-text">
+                        <span id="span">All</span>
+                        <i id="icon" class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul id="list" class="dropdown-list">
+                        <li class="dropdown-list-item">All</li>
+                        <li class="dropdown-list-item">Accessories</li>
+                        <li class="dropdown-list-item">Apple Products</li>
+                        <li class="dropdown-list-item">Laptops</li>
+                        <li class="dropdown-list-item">Printers</li>
+                    </ul>
+                </div>
+                <!-- Dropdown ends -->
+
+                <!-- Search box input start -->
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search anything..." />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <!-- Search box input ends -->
+            </form>
+
+            <!-- Login starts -->
+            <div class="login_header">
+                <a href="login.html"><i class="fa-solid fa-user"></i> Login / Register</a>
+            </div>
+            <!-- Login ends -->
+
+            <div class="cart_header">
+
+                <div onclick="open_cart()" class="icon_cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <!--      here i need the item number to be dynamic  !!!!!**     -->
+                    <span class="count_item">0</span>
+                </div>
+
+                <div class="total_price">
+                    <p>My Cart:</p>
+                    <!--      here i need the cart price to be dynamic  !!!!!**     -->
+                    <p class="price_cart_head">$0</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <nav>
+            <div class="links container">
+
+                <ul id="responsivemenu">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="all_products.html">All Product</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Contact</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <div class="cart">
+        <div class="top_cart">
+            <h3>My Cart <span>(0 Item in Cart)</span></h3>
+            <span onclick="close_cart()" class="close_cart"><i class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+        <div class="items_in_cart">
+
+            <div class="item_cart">
+                <img src="img/product/product-1.jpg" alt="">
+                <div class="content">
+                    <h4>Iphone 6 new in box</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+            <div class="item_cart">
+                <img src="img/product/product-2.jpg" alt="">
+                <div class="content">
+                    <h4>Samsung Galaxy S4</h4>
+                    <p class="price_cart">$140</p>
+                </div>
+                <button class="delete_item"><i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+
+
+        </div>
+
+        <div class="bottom_cart">
+            <div class="total">
+                <p>Cart Subtotal</p>
+                <p class="price_cart_total">$0</p>
+            </div>
+            <div class="button_cart">
+                <a href="checkout.html" class="btn_cart">Proceed to Checkout</a>
+                <button onclick="close_cart()" class="btn_cart trans_bg">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="signin sec_form">
+
+        <div class="form_container">
+            <p class="title">Welcome Back</p>
+
+            <form action="" class="form">
+
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <p class="page-link">
+                <a href="#" class="page-link-label">Forgot Password?</a>
+                    </p>
+
+                    <button class="form-btn">Login</button>
+
+            </form>
+
+            <p class="sign-up-label">
+                Don't have an account? <a href="#" class="sign-up-link">sign up</a>
+            </p>
+
+            <div class="buttons-container">
+                <div class="apple-login-button">
+                    <i class="fa-brands fa-apple"></i>
+                    <span>Login with Apple</span>
+                </div>
+
+                <div class="google-login-button">
+                    <i class="fa-brands fa-google"></i>
+                    <span>Login with Google</span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <footer>
+
+        <div class="container">
+            <div class="big_row">
+                <img src="img/ANTS-LOGO.png" alt="">
+                <div class="hotline">
+                    <i class="fa-solid fa-headset"></i>
+                    <div class="text">
+                        <h5>Hotline Free 24/24:</h5>
+                        <h6>(+961) 70 887 805</h6>
+                    </div>
+                </div>
+                <p>jdjwoid iwuehduhwe wdjoiwj iowde dej debhdhdn iednjj</p>
+            </div>
+            <div class="row">
+                <h4>FAQs & Help</h4>
+
+                <div class="links">
+                    <a href="">Popular</a>
+                    <a href="">Our Services</a>
+                    <a href="">Your Account</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms & Conditions</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Shipping & Delivery</h4>
+
+                <div class="links">
+                    <a href="">Popular</a>
+                    <a href="">Our Services</a>
+                    <a href="">Your Account</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms & Conditions</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <h4>Information</h4>
+
+                <div class="links">
+                    <a href="">Popular</a>
+                    <a href="">Our Services</a>
+                    <a href="">Your Account</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms & Conditions</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <p>&copy; 2024 <span>AntsTech.</span> All rights reserved.</p>
+
+                <div class="payment_img">
+                    <img src="img/payment-1.png" alt="">
+                    <img src="img/payment-2.png" alt="">
+                    <img src="img/payment-3.png" alt="">
+                    <img src="img/payment-4.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/ItemDetails.js"></script>
+    <script src="js/checkout.js"></script>
+    <script src="js/main_page.js"></script>
+
+</body>
+
+</html>

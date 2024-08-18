@@ -1,0 +1,442 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --main-color: #649dad;
+    --dark-color: #2c3e50;
+    --parg-color: #95a5a6;
+    --dark-red: #e74c3c;
+    --border-color: #bdc3c7;
+    --name-item: #3498db;
+    --shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+}
+
+body {
+    background: #f5f6f9;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--dark-color);
+}
+
+p {
+    color: var(--parg-color);
+}
+
+.container {
+    width: 77%;
+    margin: auto;
+}
+
+@media (max-width: 1500px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: 1000;
+    width: 100%;
+}
+
+header .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+/* Start LOGO */
+
+header .top-nav .logo {
+    flex: 0 1 auto; /* Allow the logo to take its natural size */
+    text-align: center;
+    padding-right: 100px;
+}
+
+header .top-nav .logo img {
+    width: 200px;
+}
+
+/* End LOGO */
+
+/* Start Search */
+
+header .top-nav .search {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 700px;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+    z-index: 5;
+
+}
+
+.dropdown {
+    position: relative;
+    width: 180px;
+    height: 100%;
+    border-radius: 50px;
+    background-color: var(--main-color);
+    border: 1px solid #fff;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.dropdown-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: transparent;
+    padding: 0.5rem 1rem 1.5rem 1.3rem;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.dropdown-list {
+    display: block;
+    position: absolute;
+    top: 3rem;
+    left: 0;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: var(--shadow);
+    z-index: 10;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.dropdown-list-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 15px;
+    padding: 1rem 0 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.3s ease, margin-left 0.2s ease;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-list-item:hover {
+    margin-left: 0.5rem;
+    color: var(--main-color);
+}
+
+#list.show {
+    max-height: 300px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    width: 100%;
+    color: var(--main-color);
+}
+
+.search-box input {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    border: 0;
+    outline: 0;
+    background: none;
+}
+
+.search-box i {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-box input::placeholder {
+    font-size: 0.90rem;
+    color: var(--parg-color);
+}
+
+/* END of Search */
+
+/* START LOGIN */
+
+header .top-nav .login_header {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 19px;
+    min-width: 180px;
+}
+
+header .top-nav .login_header a {
+    color: var(--parg-color);
+    font-size: 16px;
+}
+
+header .top-nav .login_header i {
+    padding-right: 5px;
+    color: var(--dark-color);
+}
+
+header .top-nav .login_header a:hover {
+    color: var(--main-color);
+}
+/* End LOGIN */
+
+
+/* Start of  CART */
+
+header .top-nav .cart_header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    padding: 0 15px;
+}
+
+header .top-nav .cart_header i {
+    color: var(--dark-color);
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+header .top-nav .cart_header i:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+header .top-nav .cart_header .icon_cart {
+    position: relative;
+}
+
+header .top-nav .cart_header .count_item {
+    position: absolute;
+    background: var(--main-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    top: -5px;
+    right: 0px;
+    color: var(--dark-color);
+    border: 1px solid var(--border-color);
+}
+
+header .top-nav .cart_header .total_price p {
+    margin-bottom: 5px;
+    font-size: 15px;
+    min-width: 58px;
+}
+
+/* End of Cart */
+
+/* Start of Nav for LINKS */
+
+header nav {
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow */
+}
+
+header .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .links ul {
+    display: flex;
+    gap: 70px;
+}
+
+header .links ul li a {
+    color: var(--dark-color);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+header .links ul li {
+    position: relative;
+    padding: 10px 0;
+}
+
+header .links ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    transition: all 0.3s ease-in-out;
+}
+
+header .links ul li.active::after,
+header .links ul li:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+.hamburger div {
+    width: 100%;
+    height: 2px;
+    background: var(--dark-color);
+}
+
+/* Responsive */
+
+header .top-nav .btn_open_menu {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    header .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .top-nav .logo {
+        text-align: center;
+        padding-right: 20px;
+    }
+
+    header .top-nav .search {
+        width: 100%;
+        min-width: 500px; /* Increased maximum width */
+        display: flex;
+        justify-content: center;
+    }
+
+    header .top-nav .login_header {
+        display: none;
+    }
+
+    header .top-nav .cart_header {
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    header .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header .top-nav .logo {
+        order: 2;
+        text-align: center;
+        padding-right: 20px;
+    }
+
+    header .top-nav .search {
+        order: 4;
+        width: 100%;
+        min-width: 500px; /* Increased maximum width */
+        display: flex;
+        justify-content: center;
+    }
+
+    header .top-nav .cart_header {
+        order: 3;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+    }
+
+    header nav .container{
+        display: none;
+    }
+
+    header .links{
+        padding: 20px 0;;
+    }
+
+    header .links ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 20px;
+        width: 220px;
+        border-right: 1px solid var(--border-color);
+        text-align: center;
+        transition: 0.3s ease-in-out;
+    }
+
+    header .links ul.active{
+        left: 0;
+    }
+
+    header .top-nav .btn_open_menu{
+        display: block;
+        font-size: 25px;
+    }
+
+}

@@ -1,0 +1,604 @@
+@import url('header.css');
+@import url('cart.css');
+
+/* Start the right Side Bar Slider */
+
+.slider{
+    margin-top: 180px;
+}
+
+.slider .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.slider .container .side_bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribute space evenly */
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.slider .container .side_bar h2 {
+    display: flex;
+    padding: 15px 10px;
+    gap: 10px;
+    align-items: center;
+    font-size: 15px;
+    margin: 0;
+}
+
+.slider .container .side_bar a {
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--dark-color);
+    border-top: 1px solid var(--border-color);
+    transition: 0.3s ease-in-out;
+    text-align: left;
+}
+
+.slider .container .side_bar a:hover {
+    color: var(--main-color);
+}
+
+/* Start of Swiper */
+
+.slider .container .slide-swp {
+    width: calc(100% - 350px);
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.slider .container .slide-swp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+}
+
+.slider .container .slide-swp .swiper-pagination span {
+    background: #fff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #fff !important;
+    width: 35px !important;
+    height: 7px !important;
+    border-radius: 30px !important;
+}
+
+/* End of Swiper */
+
+/* Start Features */
+
+.features {
+    margin: 50px 0;
+}
+
+.features .container {
+    display: flex;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.features .container .feature_item {
+    width: 18%;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.features .container .feature_item img {
+    width: 50px;
+}
+
+.features .container .feature_item h4 {
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.features .container .feature_item p {
+    font-size: 12px;
+}
+
+/* Start Features */
+
+/* Start Banners */
+
+.banner {
+    margin: 50px 0;
+}
+
+.banner .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner .container .banner_img {
+    width: 32%;
+    position: relative;
+}
+
+.banner .container .banner_img img {
+    width: 100%;
+}
+
+.banner .glass_hover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.banner .glass_hover::after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background: linear-gradient(50deg, transparent 50%,
+            rgba(255, 255, 255, 0.1)60%, rgba(255, 255, 255, 0.5)70%, transparent 71%);
+    background-size: 200% 100%;
+    background-position: 200% 0;
+    z-index: 90;
+    transition: 0.8s;
+}
+
+.banner .banner_img:hover .glass_hover::after {
+    background-position: -20% 0;
+}
+
+.banner .banner_img a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+/* End Banner */
+
+
+
+/* Start Sale Slide */
+
+.slide {
+    margin-bottom: 100px;
+}
+
+.top_slide {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.top_slide::after {
+    position: absolute;
+    content: '';
+    bottom: -1px;
+    left: 0;
+    width: 90px;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.top_slide h2 {
+    text-transform: capitalize;
+}
+
+.top_slide h2 span {
+    font-weight: normal;
+}
+
+
+                /* The Start in Sale Slide There is a Swiper */
+.slide .container{
+    position: relative;
+    z-index: 10;
+}
+.slide .container .mySwiper{
+    overflow: hidden;
+    padding: 10px;
+}
+
+.slide .container .mySwiper .btn_Swip{
+    position: absolute;
+    top: 45px;
+    right: 0;
+    color: var(--dark-color);
+    font-weight: bold;
+    padding: 0 25px;
+}
+
+.slide .container .mySwiper .btn_Swip::after{
+    font-size: 25px;
+}
+
+.slide .container .mySwiper .btn_Swip.swiper-button-prev{
+    left: calc(100% - 90px);
+}
+
+.slide .container .mySwiper .btn_Swip:hover{
+    color: var(--main-color);
+    transition: 0.3s ease-in-out;
+}
+
+                /* The End in Sale Slide There is a Swiper */
+               /*  End Sale Slide  */
+
+
+
+/* Start Product Card Style */
+.product {
+    position: relative;
+    background: #fff;
+    padding: 15px 15px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--shadow);
+    border-radius: 5px;
+    width: 25%;
+    z-index: 10;
+    flex-direction: column; /* Make it a flex container to easily align children */
+}
+
+.product .sales_discount {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    background-color: var(--dark-red);
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.img_product {
+    position: relative;
+    flex-grow: 1; /* Allow the image container to grow and fill available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_product img:first-child {
+    width: 100%;
+    transition: opacity 0.7s step-start;
+}
+
+.img_product .img_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.1);
+    transition: opacity 0.7s step-start, transform 0.7s step-start;
+}
+
+.img_product:hover img:first-child {
+    opacity: 0;
+}
+
+.img_product:hover .img_hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.product .name_product {
+    position: relative;
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Ensure text within the flex container is centered */
+    padding: 15px 0; /* Optional: add padding for spacing */
+    width: 100%;
+}
+
+.product .name_product a {
+    position: absolute;
+    color: var(--dark-color);
+}
+
+.product .name_product a:hover {
+    color: var(--main-color);
+}
+
+/* Style for the price row to accommodate the cart icon */
+.price-row {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between; /* Space between price and icon */
+    text-align: left;
+}
+
+/* Style for the cart icon */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 17px; /* Adjust the size as needed */
+    color: var(--dark-color); /* Use the same color as other icons */
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: absolute;
+    background: var(--dark-color);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    font-size: 12px;
+    pointer-events: none;
+    white-space: nowrap;
+    transform: translateY(-10px);
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--dark-color) transparent transparent transparent;
+}
+
+.tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.price p {
+    color: var(--dark-color);
+    font-weight: bold;
+    margin: 0; /* Remove default margin to prevent misalignment */
+}
+
+.product .price span {
+    color: var(--dark-red);
+}
+
+.price .old_price {
+    color: var(--parg-color);
+    text-decoration: line-through;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Hide heart icon initially */
+.icons .fa-heart {
+    visibility: hidden;
+}
+
+/* Show heart icon on hover */
+.product:hover .icons .fa-heart {
+    visibility: visible;
+}
+
+/* Specs list */
+.product .product_details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.product:hover .product_details {
+    max-height: 500px; /* Adjust as needed to ensure the entire details section is visible */
+}
+
+.product .product_specs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.product .product_specs li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+}
+
+.product .product_specs li:first-child {
+    border-top: none;
+}
+
+.product .product_specs strong {
+    color: var(--dark-color);
+}
+
+.product .product_specs span {
+    text-align: right;
+    flex-grow: 1;
+    /* Ensure span takes available space */
+    display: block;
+    /* Ensure block layout for text alignment */
+}
+
+.product .more_details {
+    display: none;
+    /* Hidden by default */
+    text-align: left;
+}
+
+.product .more_details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    border-top: 1px solid #eee;
+}
+
+.product .more_details li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    border-top: 1px solid #eee;
+}
+
+.product .more_details li:first-child {
+    border-top: none;
+}
+
+.product .more_details strong {
+    color: var(--dark-color);
+}
+
+.product .more_details span {
+    text-align: right;
+    flex-grow: 1;
+    display: block;
+}
+
+.expand-button {
+    text-align: center;
+    cursor: pointer;
+    color: var(--dark-color);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    /* Position at the left edge of the card */
+    width: 100%;
+    /* Take the full width of the card */
+    bottom: 0;
+    background: linear-gradient(to top, rgba(217, 217, 217, 0.8), rgba(217, 217, 217, 0));
+    /* Gradient background */
+    padding: 10px;
+    transition: background 0.3s;
+    display: flex;
+    justify-content: center;
+    /* Center the content horizontally */
+    align-items: center;
+    /* Center the content vertically */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Light shadow */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s;
+    /* Smooth transition for the appearance */
+}
+
+.product .product_specs:hover + .expand-button,
+.expand-button:hover {
+    opacity: 1; /* Show the button on hovering */
+}
+
+.expand-button.hide-active {
+    font-size: 16px; /* Modify this value to your desired font size */
+    font-weight: normal;
+}
+
+/* End of Product Card */
+
+
+
+/* Start of Banner_2 */
+
+.banner_2.banner .container .banner_img {
+
+    width: 49%;
+    position: relative;
+
+}
+
+/* End of Banner_2 */
+
+
+
+/* Start of slide slide_1 */
+
+.slide_1 {
+    margin-bottom: 20px; /* Reduce the margin-bottom to bring sections closer */
+}
+
+.slide_1 .product_swip {
+    width: calc(100% - 300px);
+}
+
+.slide_1 .slide_with_img {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slide_1 .categ_img {
+    padding: 10px 5px;
+    width: 280px;
+}
+
+.slide_1 .categ_img img {
+    width: 100%;
+    height: 100%; /* If you want it to match the height of the cards just put 100% */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* End of slide slide_1 */
+
+
+
+/* Start of slide slide_2 */
+
+.slide_2{
+    margin-bottom: 20px;
+}
+
+.slide_2 .product_swip2 {
+    width: calc(100% - 300px);
+}
+
+.slide_2 .slide_with_img {
+    display: flex;
+    align-items: flex-start;
+}
+
+.slide_2 .categ_img {
+    padding: 10px 5px;
+    width: 280px;
+}
+
+.slide_2 .categ_img img {
+    width: 100%;
+    height: 100%; /* If you want it to match the height of the cards just put 100% */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* End of slide slide_2 */
+

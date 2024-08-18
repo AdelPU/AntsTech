@@ -1,0 +1,196 @@
+@import url('header.css');
+@import url('cart.css');
+@import url('main_page.css');
+
+
+/* Start of Newsletter 
+
+.newsletter {
+    background: #fff;
+}
+
+.newsletter .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.newsletter .text {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.newsletter .text img{
+    width: 70px;
+}
+
+.newsletter .text h4{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.newsletter .text p{
+    margin: 12px 0;
+}
+
+.newsletter .text h6{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.newsletter .newsletter_form{
+    width: 30%;
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    padding-right: 6px;
+}
+
+.newsletter .newsletter_form input{
+   flex: auto;
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.newsletter .newsletter_form button{
+    background: var(--main-color);
+    outline: none;
+    border: none;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 25px;
+    transition: background 0.3s;
+}
+
+.newsletter .newsletter_form button:hover {
+    background: var(--dark-color);
+}
+
+End of Newsletter */
+
+/* Start of footer */
+
+
+footer{
+    background: #394150;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+footer .container .big_row{
+    width: 30%;
+}
+
+footer .container .big_row img{
+    width: 250px;
+    margin-top: -20px;
+}
+
+
+footer .container .big_row p{
+    width: 90%;
+    color: var(--parg-color);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+footer .container .big_row .hotline{
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    gap: 10px;
+}
+
+footer .container .big_row .hotline i{
+    font-size: 60px;
+    color: var(--main-color);
+}
+
+footer .container .big_row .hotline h5{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .container .big_row .hotline h6{
+    color: var(--main-color);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer .container .row{
+    width: 22%;
+    margin-top: 10px;
+}
+
+footer .container .row h4{
+    color:#fff ;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+footer .container .row .links{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+footer .container .row .links a{
+    color: var(--parg-color);
+    font-size: 14px;
+    position: relative;
+    left: 0;
+    transition: 0.3s ease-in-out ;
+}
+
+footer .container .row .links a:hover{
+    left: 8px;
+    color: var(--main-color);
+
+}
+
+footer .bottom_footer{
+    background-color: #202935;
+}
+
+footer .bottom_footer .container{
+    padding: 10px 0;
+    align-items: center;
+}
+
+footer .bottom_footer .container span{
+    color: var(--main-color);
+}
+
+footer .bottom_footer .payment_img{
+    display: flex;
+    gap: 10px;
+}
+
+footer .bottom_footer .payment_img img{
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+footer .bottom_footer .payment_img img:hover{
+    filter: grayscale(0%);
+}
+
+
+/* End of footer */

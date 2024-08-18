@@ -1,0 +1,332 @@
+@import url('header.css');
+@import url('cart.css');
+@import url('main_page.css');
+@import url('footer.css');
+@import url('ItemsDetails.css');
+
+/* Start of the Title Top Page */
+
+.all_products {
+    background: #fff;
+}
+
+.top_page_title {
+    text-align: center;
+    padding: 180px 0;
+    background: #fff;
+}
+
+.top_page_title h1{
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 25px;
+}
+
+.top_page_title p{
+    font-size: 13px;
+    width: 60%;
+    margin: auto;
+    color: var(--parg-color);
+}
+
+.all_products .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -120px ;
+    margin-bottom: 30px;
+}
+
+/* Start of the right Filter */
+
+.all_products .filter{
+background: #fff;
+width: 280px;
+text-transform: capitalize;
+padding: 20px 25px;
+border: 1px solid var(--border-color);
+border-radius: 5px;
+}
+
+.all_products .filter input{
+    cursor: pointer;
+}
+
+.all_products .filter input:checked{
+    accent-color: var(--main-color);
+}
+
+.all_products .filter h4{
+    margin-bottom:10px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color) ;
+}
+
+.all_products .filter span{
+    font-size: 14px;
+}
+
+.all_products .filter .filter_item .item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.all_products .filter .filter_item .item .color{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+/* START OF PRICE RANGE SLIDER IN THE FILTER */
+
+.double-slider-box {
+    border-radius: 10px;
+}
+
+h3.range-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    margin-top: 25px;
+}
+
+.range-slider {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    margin: 40px 0 20px 0;
+    background-color: var(--parg-color);
+    border-radius: 20px;
+}
+
+.slider-track {
+    height: 100%;
+    position: absolute;
+    background-color: #fe696a;
+}
+
+.range-slider input {
+    position: absolute;
+    width: 100%;
+    background: none;
+    pointer-events: none;
+    top: 50%;
+    transform: translateY(-50%);
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    background: #FFF;
+    pointer-events: auto;
+    appearance: none;
+    cursor: pointer;
+    box-shadow: 0 .125rem .5625rem -0.125rem rgba(0, 0, 0, .25);
+}
+
+input[type="range"]::-moz-range-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 3px solid #FFF;
+    background: #FFF;
+    pointer-events: auto;
+    -moz-appearance: none;
+    cursor: pointer;
+    box-shadow: 0 .125rem .5625rem -0.125rem rgba(0, 0, 0, .25);
+}
+
+.all_products .filter .double-slider-box .range-slider .tooltip1 {
+   padding: 4px 8px;
+   border: 0;
+   background: var(--dark-color);
+   color: #fff;
+   font-size: 12px;
+   line-height: 1.2;
+   border-radius: .25rem;
+   bottom: 120%;
+   display: block;
+   position: absolute;
+   text-align: center;
+   white-space: nowrap;
+}
+
+.min-tooltip1{
+    left: 50%;
+    transform: translateX(-30%) translateY(-50%);
+    z-index: 5;
+}
+
+.max-tooltip1{
+    right: 50%;
+    transform: translateX(30%) translateY(-50%);
+    z-index: 5;
+}
+
+.input-box {
+    display: flex;
+}
+
+.min-box,
+.max-box {
+    width: 50%;
+}
+
+.min-box {
+    padding-right: .5rem;
+    margin-right: .5rem;
+}
+
+.input-wrap {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-addon {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--dark-color);
+    text-align: center;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: .25rem;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-field{
+    margin-left: -1px;
+    padding: 5px 10px;
+    font-size: 0.8125rem;
+    border-radius: .25rem;
+    position: relative;
+    flex:1 1 auto;
+    width: 1%;
+    min-width: 0;
+    color: var(--dark-color);
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid var(--border-color);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.input-field:focus{
+    outline: none;
+}
+/* END OF PRICE RANGE SLIDER IN THE FILTER */
+
+/* END OF THE RIGHT FILTER */
+
+
+
+.all_products .listed_products{
+    width: calc(100% - 300px);
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* gap:2.5%; if i want to make space between them*/
+}
+
+.all_products .listed_products .product{
+    position: relative;
+    background: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    width: 20%;
+    flex-direction: none; 
+    transition: 0.3s ease;
+}
+
+.all_products .listed_products .product:hover{
+    scale: 1.1;
+    border: 1px solid var(--border-color);
+}
+
+.all_products .listed_products .product .name_product {
+    font-size: 14px;
+}
+
+.all_products .listed_products .product .product_specs li {
+    font-size: 13px;
+}
+
+.all_products .listed_products .product .sales_discount {
+    font-size: 12px;
+}
+
+.price p {
+    font-size: 13px;
+}
+
+/* Start END PAGE PAGINATION */
+
+.pagination{
+    padding: 10px 20px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.pagination .btn_page{
+    font-size: 18px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.pagination .btn_page:hover{
+    color: var(--main-color);
+}
+
+.pagination .num_page{
+    border: 1px solid transparent;
+    width: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+}
+
+.pagination .num_page.active{
+color: var(--border-color);
+}
+
+.pagination .num_page.active:hover{
+    color: var(--dark-color);
+    }
+
+.pagination .num_page:hover{
+    border: 1px solid var(--border-color);
+    background: var(--border-color);
+    cursor: pointer;
+}
+
+/* END END PAGE PAGINATION */

@@ -1,0 +1,299 @@
+@import url('ItemsDetails.css');
+
+
+.checkout {
+    margin: 180px 0 0 0;
+}
+
+.checkout .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.checkout form {
+    width: 45%;
+}
+
+.checkout form h2 {
+    padding: 5px 20px;
+    font-size: 20px;
+}
+
+.checkout form .address,
+.checkout form .addinfo {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.checkout form .inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+}
+
+.checkout form .inputs .input-group {
+    display: flex;
+    gap: 20px;
+}
+
+.checkout form .inputs .input-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.checkout form .inputs label {
+    color: var(--dark-color);
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.checkout form .inputs input,
+.checkout form .inputs textarea {
+    margin: 5px 0 20px;
+    padding: 12px 10px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.checkout form .inputs input:focus,
+.checkout form .inputs textarea:focus {
+    border-color: var(--main-color);
+}
+
+.checkout form .inputs textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkout form .inputs input[type="text"]+input[type="text"] {
+    margin-top: -10px;
+    /* margin between the 2 inputs under the address part */
+}
+
+.required {
+    color: var(--dark-red);
+}
+
+
+.checkout form .address .payment {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Add margin to match other sections */
+}
+
+.checkout form .address .shipping {
+    margin-bottom: 20px; /* Add margin to match other sections */
+}
+
+.checkout form .address .shipping h2 {
+    margin-bottom: 15px; /* Add margin to match other sections */
+}
+
+.checkout form .address .payment h2 {
+    margin-bottom: 15px; /* Add margin to match other sections */
+}
+
+.checkout form .address .option {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #fafafa;
+    font-size: 14px;
+}
+
+.checkout form .address .option.selected {
+    border-color: var(--dark-red);
+    background-color: #fef0ef;
+}
+
+.checkout form .address .option-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.checkout form .address .option-description {
+    margin-top: 10px;
+    color: #757575;
+    font-size: 13px;
+}
+
+.checkout form .address .payment p {
+    margin: 10px 0;
+    color: var(--parg-color);
+}
+
+/* Start of Order Summary Section */
+
+.checkout .ordersummary {
+    width: 45%;
+    background: #fff;
+    padding: 0 20px;
+    border: 1px solid var(--main-color);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.checkout .ordersummary h1 {
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.checkout .ordersummary .items .item_cart {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.checkout .ordersummary .items .item_cart img {
+    width: 100px;
+}
+
+.checkout .ordersummary .items .item_cart h4 {
+    color: var(--parg-color);
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.checkout .ordersummary .items .item_cart .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.checkout .ordersummary .items .item_cart .price_trash {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout .ordersummary .items .item_cart .price_cart {
+    color: var(--dark-color);
+    font-size: 16px;
+}
+
+.checkout .ordersummary .items .item_cart .price_trash i {
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: color 0.3s;
+    font-size: 13px;
+    padding-right: 5px ;
+}
+
+.checkout .ordersummary .items .item_cart .price_trash i:hover {
+    color: var(--dark-red);
+}
+
+
+.checkout .ordersummary .discount_code {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.checkout .ordersummary .discount_code input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    margin-right: 15px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.checkout .ordersummary .discount_code input:focus{
+border-color: var(--main-color);
+}
+
+.checkout .ordersummary .discount_code button {
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--parg-color);
+    transition: background-color 0.3s;
+}
+
+.checkout .ordersummary .discount_code button.active {
+    background-color: var(--main-color);
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.checkout .ordersummary .total {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout .ordersummary .sub_total,
+.checkout .ordersummary .shipping_cost{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout .ordersummary .sub_total p,
+.checkout .ordersummary .shipping_cost p {
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--dark-color);
+    text-transform: capitalize;
+}
+
+.checkout .ordersummary .sub_total span,
+.checkout .ordersummary .shipping_cost span {
+    font-weight: normal;
+    font-size: 14px;
+    color: var(--dark-color);
+}
+
+.checkout .ordersummary .total p {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--dark-color);
+    text-transform: capitalize;
+}
+
+.checkout .ordersummary .total span {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--dark-color);
+}
+
+.checkout .ordersummary .submit_button {
+    border-top: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+
+.checkout .ordersummary .submit_button button {
+    width: 100%;
+    background: var(--main-color);
+    color: var(--dark-color);
+    border: 2px solid var(--main-color);
+    padding: 15px 0;
+    outline: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.checkout .ordersummary .submit_button button:hover {
+    background: transparent;
+    color: var(--main-color);
+}
