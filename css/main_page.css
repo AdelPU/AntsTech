@@ -153,7 +153,6 @@
             rgba(255, 255, 255, 0.1)60%, rgba(255, 255, 255, 0.5)70%, transparent 71%);
     background-size: 200% 100%;
     background-position: 200% 0;
-    z-index: 90;
     transition: 0.8s;
 }
 
@@ -167,7 +166,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 100;
 }
 
 /* End Banner */
@@ -355,7 +353,7 @@
     text-align: center;
     border-radius: 5px;
     padding: 5px 10px;
-    z-index: 10;
+    z-index: 25;
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     font-size: 12px;
@@ -418,6 +416,7 @@
 .product:hover .product_details {
     max-height: 500px; /* Adjust as needed to ensure the entire details section is visible */
 }
+
 
 .product .product_specs {
     list-style: none;
@@ -546,6 +545,8 @@
 
 .slide_1 {
     margin-bottom: 20px; /* Reduce the margin-bottom to bring sections closer */
+    position: relative;
+    z-index: 20;
 }
 
 .slide_1 .product_swip {
@@ -602,3 +603,19 @@
 
 /* End of slide slide_2 */
 
+.product{
+    width: 100%;
+    position: absolute;
+}
+
+.products .swiper-slide,
+.listed_products .swiper-slide{
+    width: 20%;
+    height: 300px !important;
+    position: relative;
+}
+
+.slide .container .mySwiper {
+    overflow: inherit !important;
+    overflow-x: clip !important;
+}

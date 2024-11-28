@@ -375,7 +375,7 @@ header .top-nav .btn_open_menu {
     header .top-nav .cart_header {
         display: flex;
         align-items: center;
-        padding-left: 40px;
+        padding-left: 20px;
     }
 }
 
